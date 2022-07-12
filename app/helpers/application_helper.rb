@@ -1,5 +1,5 @@
 module ApplicationHelper
-end
+
 def render_cart_conditionally
   if enhanced_cart.length != 0
     puts "----->#{enhanced_cart.length}"
@@ -8,9 +8,10 @@ def render_cart_conditionally
     render :partial => 'empty_cart'
 
   end
-end
+  end
 def render_soldout(num)
   if num < 1
-  render :partial => 'soldout'
+    render :partial => 'soldout'
   end
+end
 end
